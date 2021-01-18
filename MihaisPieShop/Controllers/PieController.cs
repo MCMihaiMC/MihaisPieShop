@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MihaisPieShop.Models;
+using MihaisPieShop.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace MihaisPieShop.Controllers
 
         public ViewResult List()
         {
-            return View(_pieRepository.AllPies);
+            //ViewBag.CurrentCategory = "Cheese cakes";
+            PiesListViewModel piesListViewModel = new PiesListViewModel();
+            piesListViewModel.Pies = _pieRepository.AllPies;
+
+            piesListViewModel.CurrentCategory = "Cheese cakes";
+            return View(piesListViewModel);
         }
     }
 }
