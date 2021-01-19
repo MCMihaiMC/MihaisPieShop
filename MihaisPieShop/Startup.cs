@@ -31,9 +31,6 @@ namespace MihaisPieShop
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
 
-            //services.AddTransient();
-            //services.AddSingleton();
-
             services.AddControllersWithViews();
         }
 
@@ -55,11 +52,6 @@ namespace MihaisPieShop
             endpoints.MapControllerRoute(
                 name: default,
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-                    
-                //endpoints.MapGet("/", async context =>
-                //{
-                //    await context.Response.WriteAsync("Hello World!");
-                //});
             });
         }
     }
