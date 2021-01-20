@@ -10,10 +10,10 @@ namespace MihaisPieShop.Controllers
 {
     public class PieController : Controller
     {
-        private readonly IPieRepository _pieRepository;
+        private readonly Models.IPieRepository _pieRepository;
         private readonly ICategoryRepository _categoryRepository;
 
-        public PieController(IPieRepository pieRepository, ICategoryRepository categoryRepository)
+        public PieController(Models.IPieRepository pieRepository, ICategoryRepository categoryRepository)
         {
             _pieRepository = pieRepository;
             _categoryRepository = categoryRepository;
