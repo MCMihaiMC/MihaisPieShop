@@ -1,16 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MihaisPieShop.Models;
 using MihaisPieShop.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MihaisPieShop.Controllers
 {
     public class PieController : Controller
     {
-        private readonly Models.IPieRepository _pieRepository;
+        private readonly IPieRepository _pieRepository;
         private readonly ICategoryRepository _categoryRepository;
 
         public PieController(Models.IPieRepository pieRepository, ICategoryRepository categoryRepository)
@@ -21,7 +17,6 @@ namespace MihaisPieShop.Controllers
 
         public ViewResult List()
         {
-            //ViewBag.CurrentCategory = "Cheese cakes";
             PiesListViewModel piesListViewModel = new PiesListViewModel();
             piesListViewModel.Pies = _pieRepository.AllPies;
 
