@@ -31,6 +31,8 @@ namespace MihaisPieShop
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddScoped<IOrderRepository, OrderRepository>();
+
             services.AddHttpContextAccessor();
             services.AddSession();
 
