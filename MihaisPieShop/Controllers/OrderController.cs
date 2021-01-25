@@ -27,7 +27,7 @@ namespace MihaisPieShop.Controllers
 
             if(_shoppingCart.ShoppingCartItems.Count == 0)
             {
-                ModelState.AddModelError("", "Your cartis empty, addsome pies first !");
+                ModelState.AddModelError("", "Your cart is empty, add some pies first !");
             }
 
             if (ModelState.IsValid)
