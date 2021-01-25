@@ -52,6 +52,7 @@ namespace MihaisPieShop
             app.UseSession(); // must bebefore routing
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
